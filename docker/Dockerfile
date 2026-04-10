@@ -10,6 +10,7 @@ RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
 FROM python:3.11-slim
 
 RUN apt-get update && apt-get upgrade -y && \
+    pip install --no-cache-dir --upgrade pip setuptools wheel && \
     useradd -m -u 1000 devops_user && \
     rm -rf /var/lib/apt/lists/*
 
